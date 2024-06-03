@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computación en la Nube - Grupo 2</title>
+	<style>
+		
+		body {
+			background-color: #f2f2f2; /* Fondo gris claro */
+		}
+		.container {
+			width: 80%;
+			margin: 40px auto;
+			text-align: center;
+		}
+		.image {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			margin: 20px;
+		}
+		.message {
+			font-size: 36px;
+			color: #00698f; /* Azul oscuro */
+			cursor: pointer;
+		}
+		.message:hover {
+			color: #0099cc; /* Azul claro */
+		}
+		.info {
+			font-size: 24px;
+			color: #333; /* Gris oscuro */
+		}
+		.bold {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSCZPyOervGGI74okKAPkOxiv3GhsWBtsCyocQAlOi1Qe46okrBhlLCpzVWnsGiTXJed8&usqp=CAU" alt="Imagen de ejemplo" class="image">
+		<h1 class="message" onclick="alert('¡Hola mundo!')">Hola mundo!</h1>
+		<div class="info">
+            
+            <p><span class="bold">Curso</span></p>
+			<p><span class="bold">COMPUTACIÓN EN LA NUBE</span></p>
+
+			<p><span class="bold">Grupo 2</span></p>
+				<p>Alfaro Asunción Juan Carlos<br>Jacobo Romero Mitchel
+                <br>Miñano Siccha Brayan<br>Reyna Vizconde Daniel</p>
+            <br>
+                <p>Fecha y hora actual: <span id="fecha-hora"></span></p>
+		</div>
+	</div>
+	
+	<script>
+		const fechaHora = document.getElementById("fecha-hora");
+		setInterval(function() {
+			const fecha = new Date();
+			fechaHora.textContent = fecha.toLocaleDateString() + " " + fecha.toLocaleTimeString();
+		}, 1000);
+	</script>
+</body>
+</html>
