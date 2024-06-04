@@ -1,0 +1,90 @@
+{
+    "doctype": "html",
+    "html": {
+      "head": {
+        "title": "Computación en la Nube - Grupo 2",
+        "style": {
+          "body": {
+            "background-color": "#f2f2f2"
+          },
+          ".container": {
+            "width": "80%",
+            "margin": "40px auto",
+            "text-align": "center"
+          },
+          ".image": {
+            "width": "200px",
+            "height": "200px",
+            "border-radius": "50%",
+            "margin": "20px"
+          },
+          ".message": {
+            "font-size": "36px",
+            "color": "#00698f",
+            "cursor": "pointer"
+          },
+          ".message:hover": {
+            "color": "#0099cc"
+          },
+          ".info": {
+            "font-size": "24px",
+            "color": "#333"
+          },
+          ".bold": {
+            "font-weight": "bold"
+          }
+        }
+      },
+      "body": {
+        "div": {
+          "class": "container",
+          "img": {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSCZPyOervGGI74okKAPkOxiv3GhsWBtsCyocQAlOi1Qe46okrBhlLCpzVWnsGiTXJed8&usqp=CAU",
+            "alt": "Imagen de ejemplo",
+            "class": "image"
+          },
+          "h1": {
+            "class": "message",
+            "onclick": "alert('¡Hola mundo!')",
+            "text": "Hola mundo!"
+          },
+          "div": {
+            "class": "info",
+            "p": [
+              {
+                "span": {
+                  "class": "bold",
+                  "text": "Curso"
+                }
+              },
+              {
+                "span": {
+                  "class": "bold",
+                  "text": "COMPUTACIÓN EN LA NUBE"
+                }
+              },
+              {
+                "span": {
+                  "class": "bold",
+                  "text": "Grupo 2"
+                }
+              },
+              {
+                "text": "Alfaro Asunción Juan Carlos\nJacobo Romero Mitchel\nMiñano Siccha Brayan\nReyna Vizconde Daniel"
+              },
+              {
+                "text": "Fecha y hora actual: ",
+                "span": {
+                  "id": "fecha-hora"
+                }
+              }
+            ]
+          }
+        },
+        "script": {
+          "text": "const fechaHora = document.getElementById('fecha-hora');\nsetInterval(function() {\n  const fecha = new Date();\n  fechaHora.textContent = fecha.toLocaleDateString() + ' ' + fecha.toLocaleTimeString();\n}, 1000);"
+        }
+      }
+    }
+  }
+  
